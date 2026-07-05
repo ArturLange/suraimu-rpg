@@ -1,0 +1,277 @@
+import type { SkillDefinition } from '../types';
+
+export const SKILL_DEFINITIONS: SkillDefinition[] = [
+  {
+    id: 'breathing',
+    name: 'Breathing',
+    description:
+      'Master the art of controlled breathing. Enhances HP and MP regeneration passively. The foundation of all power.',
+    category: 'physical',
+    maxLevel: 100,
+    xpBase: 50,
+    xpExponent: 1.5,
+    unlockLevel: 1,
+    icon: '🌬️',
+    effectsPerLevel: {
+      hpRegen: 0.5,
+      mpRegen: 0.3,
+      maxHp: 5,
+      maxMp: 3,
+    },
+  },
+  {
+    id: 'running',
+    name: 'Running',
+    description:
+      'Improves movement speed, endurance, and exploration capabilities. Vital for surviving in the wild.',
+    category: 'physical',
+    maxLevel: 100,
+    xpBase: 60,
+    xpExponent: 1.5,
+    unlockLevel: 1,
+    icon: '🏃',
+    effectsPerLevel: {
+      speed: 1,
+      explorationSpeed: 0.8,
+      physicalDefense: 0.3,
+    },
+  },
+  {
+    id: 'swordFighting',
+    name: 'Sword Fighting',
+    description:
+      'The art of the blade. Increases physical attack, critical hit chance, and defense when armed with a sword.',
+    category: 'physical',
+    maxLevel: 100,
+    xpBase: 80,
+    xpExponent: 1.6,
+    unlockLevel: 1,
+    icon: '⚔️',
+    effectsPerLevel: {
+      physicalAttack: 2,
+      critChance: 0.2,
+      physicalDefense: 0.5,
+    },
+  },
+  {
+    id: 'bodyEnhancement',
+    name: 'Body Enhancement',
+    description:
+      'Channel magical energy throughout your body to enhance physical capabilities beyond normal limits.',
+    category: 'physical',
+    maxLevel: 100,
+    xpBase: 100,
+    xpExponent: 1.6,
+    unlockLevel: 5,
+    icon: '💪',
+    effectsPerLevel: {
+      maxHp: 10,
+      physicalAttack: 1.5,
+      physicalDefense: 1.5,
+      speed: 0.5,
+    },
+  },
+  {
+    id: 'stealth',
+    name: 'Stealth',
+    description:
+      'Move unseen and unheard. Increases dodge chance and reduces encounter rate with weaker monsters.',
+    category: 'physical',
+    maxLevel: 100,
+    xpBase: 90,
+    xpExponent: 1.55,
+    unlockLevel: 3,
+    icon: '🥷',
+    effectsPerLevel: {
+      dodgeChance: 0.3,
+      speed: 0.5,
+    },
+  },
+  {
+    id: 'fireMagic',
+    name: 'Fire Magic',
+    description:
+      'Command the flames of destruction. Inspired by the spirits of fire, this magic burns through physical defenses.',
+    category: 'magic',
+    maxLevel: 100,
+    xpBase: 120,
+    xpExponent: 1.7,
+    unlockLevel: 2,
+    icon: '🔥',
+    effectsPerLevel: {
+      magicAttack: 2.5,
+      maxMp: 5,
+    },
+  },
+  {
+    id: 'waterMagic',
+    name: 'Water Magic',
+    description:
+      'Wield the fluid power of water. Excels in healing and wearing down opponents over time.',
+    category: 'magic',
+    maxLevel: 100,
+    xpBase: 120,
+    xpExponent: 1.7,
+    unlockLevel: 2,
+    icon: '💧',
+    effectsPerLevel: {
+      magicAttack: 2,
+      hpRegen: 0.8,
+      mpRegen: 0.4,
+    },
+  },
+  {
+    id: 'windMagic',
+    name: 'Wind Magic',
+    description:
+      'Harness the swift and cutting power of wind. Increases speed and allows cutting attacks.',
+    category: 'magic',
+    maxLevel: 100,
+    xpBase: 120,
+    xpExponent: 1.7,
+    unlockLevel: 2,
+    icon: '🌪️',
+    effectsPerLevel: {
+      magicAttack: 2,
+      speed: 1.5,
+      critChance: 0.15,
+    },
+  },
+  {
+    id: 'earthMagic',
+    name: 'Earth Magic',
+    description:
+      'Draw power from the earth itself. Provides strong defense and powerful impact attacks.',
+    category: 'magic',
+    maxLevel: 100,
+    xpBase: 120,
+    xpExponent: 1.7,
+    unlockLevel: 2,
+    icon: '🪨',
+    effectsPerLevel: {
+      magicAttack: 2,
+      physicalDefense: 1,
+      magicDefense: 1,
+      maxHp: 5,
+    },
+  },
+  {
+    id: 'lightningMagic',
+    name: 'Lightning Magic',
+    description:
+      'Channel the raw power of thunder and lightning. Fast, precise, and devastating against armored foes.',
+    category: 'magic',
+    maxLevel: 100,
+    xpBase: 130,
+    xpExponent: 1.75,
+    unlockLevel: 5,
+    icon: '⚡',
+    effectsPerLevel: {
+      magicAttack: 3,
+      speed: 1,
+      critChance: 0.25,
+    },
+  },
+  {
+    id: 'darkMagic',
+    name: 'Dark Magic',
+    description:
+      'Tap into the void and shadows. Feared across the world, dark magic can corrode the soul and steal life.',
+    category: 'magic',
+    maxLevel: 100,
+    xpBase: 150,
+    xpExponent: 1.8,
+    unlockLevel: 10,
+    icon: '🌑',
+    effectsPerLevel: {
+      magicAttack: 3.5,
+      maxMp: 8,
+      mpRegen: 0.5,
+    },
+  },
+  {
+    id: 'divineMagic',
+    name: 'Divine Magic',
+    description:
+      'Channel the blessing of the heavens. Provides healing and protection, devastating against undead and demons.',
+    category: 'magic',
+    maxLevel: 100,
+    xpBase: 150,
+    xpExponent: 1.8,
+    unlockLevel: 10,
+    icon: '✨',
+    effectsPerLevel: {
+      magicAttack: 3,
+      magicDefense: 2,
+      hpRegen: 1,
+      maxHp: 8,
+    },
+  },
+  {
+    id: 'spatialMagic',
+    name: 'Spatial Magic',
+    description:
+      'Manipulate the fabric of space itself. Allows teleportation, spatial cuts, and storage of items.',
+    category: 'magic',
+    maxLevel: 100,
+    xpBase: 200,
+    xpExponent: 1.9,
+    unlockLevel: 20,
+    icon: '🔮',
+    effectsPerLevel: {
+      magicAttack: 4,
+      speed: 2,
+      explorationSpeed: 1,
+    },
+  },
+  {
+    id: 'poisonMagic',
+    name: 'Poison Manipulation',
+    description:
+      'Master poisons and toxic substances. Apply devastating damage-over-time effects to enemies.',
+    category: 'magic',
+    maxLevel: 100,
+    xpBase: 140,
+    xpExponent: 1.75,
+    unlockLevel: 8,
+    icon: '☠️',
+    effectsPerLevel: {
+      magicAttack: 2.5,
+      physicalAttack: 1,
+      maxMp: 4,
+    },
+  },
+  {
+    id: 'herbalism',
+    name: 'Herbalism',
+    description:
+      'Knowledge of plants and herbs. Improves crafting of potions and increases gathering yields.',
+    category: 'survival',
+    maxLevel: 100,
+    xpBase: 70,
+    xpExponent: 1.45,
+    unlockLevel: 1,
+    icon: '🌿',
+    effectsPerLevel: {
+      hpRegen: 0.3,
+    },
+  },
+  {
+    id: 'crafting',
+    name: 'Crafting',
+    description:
+      'Create weapons, armor, and tools from raw materials. Higher levels unlock better recipes.',
+    category: 'crafting',
+    maxLevel: 100,
+    xpBase: 100,
+    xpExponent: 1.5,
+    unlockLevel: 1,
+    icon: '🔨',
+    effectsPerLevel: {
+      physicalAttack: 0.5,
+      physicalDefense: 0.5,
+    },
+  },
+];
+
+export const SKILL_MAP = new Map(SKILL_DEFINITIONS.map((s) => [s.id, s]));
